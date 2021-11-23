@@ -63,7 +63,7 @@ class Page:
         lat_lon = '@' + str(place.getLat())+','+ str(place.getLon()) #cordinates
         driver.get("https://www.google.com/maps/search/"+ name +"/"+lat_lon+",15.25z") #first page will be changed by google
         
-        time.sleep(5) #necessary to load all data in the page
+        time.sleep(10) #necessary to load all data in the page
         new_url = driver.current_url #getting the new changed URL
         driver.close
         print("novo url" + str(new_url))
