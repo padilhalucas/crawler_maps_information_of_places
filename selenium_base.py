@@ -13,7 +13,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 import json
 
-#driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install())
 class Page:
     
     
