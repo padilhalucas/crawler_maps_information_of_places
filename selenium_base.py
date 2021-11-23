@@ -74,7 +74,7 @@ class Page:
         end_of_link = '!10e1'
         updated_URL = x_url[0] +"data=4m6!3m5!1s0" + y[1] + end_of_link
         driver.get(updated_URL)
-        time.sleep(5)
+        time.sleep(10)
         html_content = str(driver.page_source)    
         
         
