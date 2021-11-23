@@ -65,6 +65,7 @@ class Page:
         time.sleep(5) #necessary to load all data in the page
         new_url = driver.current_url #getting the new changed URL
         driver.close
+        print("novo url" + str(new_url))
         
         #completed URL that needs to be used for other chromedriver
         x_url = new_url.split("data=")
