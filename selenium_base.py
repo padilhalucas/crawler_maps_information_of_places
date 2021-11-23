@@ -3,12 +3,12 @@ import os
 from selenium.webdriver.common.by import By
 import time
 from places import Place
-chorme_options = webdriver.ChromeOptions()
-chorme_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-chorme_options.add_argument("--headless")
-chorme_options.add_argument("--disable-dev-shm-usage")
-chorme_options.add_argument("--no-sandbox")
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chorme_options)
+#chorme_options = webdriver.ChromeOptions()
+#chorme_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+#chorme_options.add_argument("--headless")
+#chorme_options.add_argument("--disable-dev-shm-usage")
+#chorme_options.add_argument("--no-sandbox")
+#driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chorme_options)
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 import json
