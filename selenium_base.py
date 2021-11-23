@@ -63,7 +63,7 @@ class Page:
         lat_lon = '@' + str(place.getLat())+','+ str(place.getLon()) #cordinates
         driver.get("https://www.google.com/maps/search/"+ name +"/"+lat_lon+",15.25z") #first page will be changed by google
         
-        time.sleep(10) #necessary to load all data in the page
+        time.sleep(15) #necessary to load all data in the page
         new_url = driver.current_url #getting the new changed URL
         driver.close
         print("novo url" + str(new_url))
@@ -73,11 +73,12 @@ class Page:
         y = x_url[1].split("!1s0")
         end_of_link = '!10e1'
         updated_URL = x_url[0] +"data=4m6!3m5!1s0" + y[1] + end_of_link
+        print("url final " + str(updated_URL))
         driver.get(updated_URL)
         time.sleep(10)
-        driver.close
+    
         html_content = str(driver.page_source)    
-        
+        driver.close
         
         information = ""
         for i in base:
