@@ -3,7 +3,7 @@ import os
 from selenium.webdriver.common.by import By
 import time
 from places import Place
-#chorme_options = webdriver.ChromeOptions()
+chorme_options = webdriver.ChromeOptions()
 #chorme_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chorme_options.add_argument("--headless")
 chorme_options.add_argument("--disable-dev-shm-usage")
