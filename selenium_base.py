@@ -29,6 +29,7 @@ class Page:
     
     #search the page that contains all data that we want to crawling. This method need to be called by the crawling, passing the url.
     def perform(user_lat,user_lon):
+        print("teste1")
         base = {"Opções de serviços":['Entrega sem contato','Entrega','Para viagem','Refeição no local','Mesas externas', 'Drive-through', 'Retirada na porta' ],
         "Saúde e segurança": ['Necessidade de fazer reserva','A equipe usa máscaras de proteção','É obrigatório usar máscara de proteção', 'Desinfecção das superfícies entre um cliente e outro'],
         "Comodidades":['Bom para levar crianças','Cadeirinhas altas','Banheiro','Wi-Fi gratuito'],
