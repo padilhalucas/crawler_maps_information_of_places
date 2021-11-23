@@ -44,6 +44,7 @@ class Place():
             payload={}
             headers = {}
             response = requests.request("GET", url, headers=headers, data=payload) #default
+            time.sleep(1)
         except: 
             url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-23.4903232%2C47.48873,13&radius=1500&type=restaurant&keyword=" + keyword+"&key=" + places_api_key
             payload={}
