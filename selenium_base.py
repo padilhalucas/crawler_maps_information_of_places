@@ -83,8 +83,8 @@ class Page:
         except:
             print("entrou no except novo")
             print("url: " + str())
-            button = driver.find_element_by_link_text(button_name)
-            button.click(driver.current_url)
+            button = driver.find_element_by_class_name('lI9IFe')
+            button.click()
             print("deu o click")
             time.sleep(10) #necessary to load all data in the page
             new_url = driver.current_url #getting the new changed URL
@@ -121,4 +121,5 @@ class Page:
         
 
 #driver.get("https://www.google.com.br/maps/place/Dicid/@-23.490331,-47.48873,13z/data=!4m10!1m2!2m1!1sdicid!3m6!1s0x94cf60339177292b:0xa942eaa90e9c0915!8m2!3d-23.5114806!4d-47.4354683!10e1!15sCgVkaWNpZCIDiAEBWgciBWRpY2lkkgELY2FuZHlfc3RvcmU")
+
 
