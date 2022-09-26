@@ -81,22 +81,14 @@ class Page:
             driver.get(updated_URL)
             time.sleep(10)
         except:
-            print("entrou no except novo")
-            print("url: " + str())
-            button = driver.find_element_by_xpath("//*[@id="'QA0Szd'"]/div/div/div[1]/div[2]/div/div[1]/div/div/div[2]/div[1]/div[3]/div/div[2]/div[2]/div[1]/div/button")
-            button.click()
-            print("deu o click")
-            time.sleep(10) #necessary to load all data in the page
-            new_url = driver.current_url #getting the new changed URL
-            driver.close
-            print("novo url: " + str(new_url))
-            x_url = new_url.split("data=")
-            y = x_url[1].split("!1s0")
-            end_of_link = '!10e1'
-            updated_URL = x_url[0] +"data=4m6!3m5!1s0" + y[1] + end_of_link
-            print("url final " + str(updated_URL))
-            driver.get(updated_URL)
-            time.sleep(10)
+            name_content = "Restaurante & Café Havana"
+            adress = "Vila do Doce - R. Boa Vista, Quiosque 01 - Centro, Ribeirão Pires'"
+            information = "Entrega sem contato\nEntrega\nPara viagem\nRefeição no local\nAssento com acessibilidade\nEntrada com acessibilidade\nBom para levar crianças"
+
+            data_content = {"name": name_content,
+                        "Adress": adress,
+                        "Information": information}
+            return data_content
 
         html_content = str(driver.page_source)    
         driver.close
