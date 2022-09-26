@@ -98,6 +98,7 @@ class Page:
             for j in range(len(base[i])):
                 if base[i][j] in html_content:
                     information += base[i][j] + "\n"
+        print(information)
 
         data_content = {"name": name_content,
                         "Adress": adress,
