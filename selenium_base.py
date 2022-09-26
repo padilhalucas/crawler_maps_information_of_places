@@ -83,14 +83,13 @@ class Page:
         except:
             print("entrou no except novo")
             print("url: " + str())
-            button = driver.find_element_by_class_name('lI9IFe')
+            button = driver.find_element_by_xpath("//*[@id="'QA0Szd'"]/div/div/div[1]/div[2]/div/div[1]/div/div/div[2]/div[1]/div[3]/div/div[2]/div[2]/div[1]/div/button")
             button.click()
             print("deu o click")
             time.sleep(10) #necessary to load all data in the page
             new_url = driver.current_url #getting the new changed URL
             driver.close
             print("novo url: " + str(new_url))
-
             x_url = new_url.split("data=")
             y = x_url[1].split("!1s0")
             end_of_link = '!10e1'
