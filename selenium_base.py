@@ -13,7 +13,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 import json
 
-#driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chorme_options)
 class Page:
     
     
@@ -81,6 +80,7 @@ class Page:
             driver.get(updated_URL)
             time.sleep(10)
         except:
+            print("Entrou na except Ribeirao")
             name_content = "Restaurante & Café Havana"
             adress = "Vila do Doce - R. Boa Vista, Quiosque 01 - Centro, Ribeirão Pires'"
             information = "Entrega sem contato\nEntrega\nPara viagem\nRefeição no local\nAssento com acessibilidade\nEntrada com acessibilidade\nBom para levar crianças"

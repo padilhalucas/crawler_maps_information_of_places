@@ -4,6 +4,7 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path) 
+import random
 
 places_api_key = os.environ.get("PLACES_API_KEY")
 
@@ -52,7 +53,9 @@ class Place():
         
         
         dataJson = response.json()
-        result_json = dataJson.get("results")[0]
+        result_json = len(dataJson.get("results"))
+        result_json = dataJson.get("results")[random.randint(0,result_json)]
+        #result_json = dataJson.get("results")[0]
         print(result_json)
         try:
             self.name = result_json.get('name')
